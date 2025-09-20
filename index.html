@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shoprite Receipt Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Shoprite logo + heading -->
+<div class="header">
+  <img src="Shoprite.jpeg" alt="Shoprite Logo" class="logo">
+  <h1>Receipt Generator</h1>
+</div>
+
+
+   <div class="input-section">
+  <!-- Text input for items -->
+<input type="text" id="itemName" placeholder="Enter item name">
+
+
+  <!-- Quantity -->
+  <input type="number" id="itemQty" placeholder="Quantity" min="1" value="1">
+
+  <!-- Buttons -->
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="clearCart()">Clear Cart</button>
+  <button onclick="printReceipt()">🖨️ Print / Download</button>
+</div>
+
+
+    <div id="receipt">
+      <h2>Receipt</h2>
+      <pre id="receiptOutput">No items added yet.</pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

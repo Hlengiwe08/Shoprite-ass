@@ -1,0 +1,118 @@
+/* ---------- General Body ---------- */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ---------- App Container ---------- */
+.app {
+  max-width: 700px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px;
+}
+
+/* ---------- Header: Logo + Title ---------- */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header .logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  color: #D71920; /* Shoprite red */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ---------- Input Section ---------- */
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-section input:focus {
+  outline: none;
+  border-color: #D71920;
+}
+
+.input-section button {
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #D71920;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.input-section button:hover {
+  background-color: #a3151a;
+}
+
+/* ---------- Receipt Section ---------- */
+#receipt {
+  margin-top: 25px;
+  border-top: 3px solid #D71920;
+  padding-top: 15px;
+}
+
+#receipt h2 {
+  color: #D71920;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Till slip style */
+#receiptOutput {
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  padding: 15px;
+  font-family: monospace;
+  font-size: 14px;
+  white-space: pre-wrap;
+  color: black;
+  text-align: center;
+}
+
+/* ---------- Print Styles ---------- */
+@media print {
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app, .input-section, .header, h2 {
+    display: none; /* Hide UI and logo when printing */
+  }
+
+  pre {
+    font-family: monospace;
+    font-size: 14px;
+    width: 280px; /* narrow till slip width */
+    margin: auto;
+    text-align: center;
+    white-space: pre-wrap;
+  }
+}
